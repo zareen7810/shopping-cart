@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header header1">
+            <p class="logo"><input type="text" id="searchInput" placeholder="filter here...."onkeyup="search()"></input></p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping customcss">
+
+            </i><p id="count">0</p>
+        </div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+    
+            <div id="filtered-products"></div>
+
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">0.00</h2>
+                </div>
+            </div>
+        </div>
+    
+       <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Remove Item</h1>
+            <p>Are you sure you want to Item from cart?</p>
+          
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" onclick="removeProduct()" class="deletebtn">ok</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <div class="container">
+          <h1>Remove Item</h1>
+          <p>Are you sure you want to Item from cart?</p>
+        </div>
+        <div>
+          <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">cancel</button>
+          <button  type="button"class="deletebtn" onclick="removeProduct()">ok</button>
+        </div>
+      </div> -->
+        <script src="cart.js"></script>
+     </body>
+</html>  
